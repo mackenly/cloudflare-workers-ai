@@ -35,7 +35,8 @@ Experimental use of Cloudflare Workers AI
 ```
 ### Create Image
 - `http://localhost:8787/create/image?auth=secret&prompt=Disco%20Dog` - stable-diffusion-xl-base
-![Example image](image.png)
+
+<img src="./image.png" width="300" height="auto" alt="Looked at image">
 
 ### Look at Image
 - `http://localhost:8787/look/image?auth=secret&url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1682686581551-867e0b208bd1%3Fq%3D80%26w%3D3870%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D` - resnet-50
@@ -70,4 +71,6 @@ Experimental use of Cloudflare Workers AI
   ]
 }
 ```
-![Looked at image](https://images.unsplash.com/photo-1682686581551-867e0b208bd1?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) via Unsplash
+<img src="https://images.unsplash.com/photo-1682686581551-867e0b208bd1?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="300" height="auto" alt="Looked at image">
+
+via Unsplash
