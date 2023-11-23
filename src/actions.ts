@@ -1,11 +1,16 @@
 import { Ai } from '@cloudflare/ai';
 
 export interface Env {
-    // If you set another name in wrangler.toml as the value for 'binding',
-    // replace "AI" with the variable name you defined.
     AI: any;
+    API_KEY: string;
 }
 
+/**
+ * Run the LLM AI
+ * @param prompt - Prompt to send to the AI
+ * @param env - Environment variables
+ * @returns - Message response from the AI
+ */
 export async function llm(prompt: string, env: Env) {
     const ai = new Ai(env.AI);
     const messages = [
@@ -18,7 +23,13 @@ export async function llm(prompt: string, env: Env) {
     });
 }
 
-export async function image(url: string, env: Env) {
+/**
+ * Tag an image
+ * @param url - input image url
+ * @param env - Environment variables
+ * @returns - Tag response from the AI
+ */
+export async function tagImage(url: string, env: Env) {
     const imageResponse = await fetch(url);
     const blob = await imageResponse.arrayBuffer();
 
@@ -37,12 +48,24 @@ export async function image(url: string, env: Env) {
     };
 }
 
+/**
+ * Generate an image
+ * @param prompt - Prompt for AI image generation
+ * @param env - Environment variables
+ * @returns - Image response from the AI
+ */
 export async function generateImage(prompt: string, env: Env) {
     const ai = new Ai(env.AI);
 
     return await ai.run('@cf/stabilityai/stable-diffusion-xl-base-1.0', { prompt: prompt });
 }
 
+/**
+ * Classify text as positive or negative
+ * @param text - Text to classify as positive or negative
+ * @param env - Environment variables
+ * @returns - Classification response from the AI
+ */
 export async function classify(text: string, env: Env) {
     const ai = new Ai(env.AI);
 

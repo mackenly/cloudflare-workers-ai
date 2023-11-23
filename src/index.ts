@@ -1,5 +1,5 @@
 import { Ai } from '@cloudflare/ai'
-import { llm, image, generateImage, classify } from './actions'
+import { llm, tagImage, generateImage, classify } from './actions'
 import {
 	error,
 	json,
@@ -35,7 +35,7 @@ router
 		if (!query.url) {
 			return error(400, 'Missing url');
 		}
-		const result = await image(query.url, env);
+		const result = await tagImage(query.url, env);
 
 		return Response.json(result);
 	})
