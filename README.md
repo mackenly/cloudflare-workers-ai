@@ -1,5 +1,5 @@
 # cloudflare-workers-ai
-Experimental use of Cloudflare Workers AI
+Experimental use of Cloudflare Workers AI 
 
 ## How to use
 1. Clone this repository
@@ -12,7 +12,13 @@ Experimental use of Cloudflare Workers AI
 
 ## Endpoints
 ### Create Text
-- `http://localhost:8787/create/text?auth=secret&prompt=Can%20you%20tell%20me%20about%20Thomas%20Sowell?` - mistral-7b
+- `http://localhost:8787/create/text?auth=secret&prompt=Who%20was%20George%20Washington?` - mistral-7b
+```json
+{
+  "response": "\nGeorge Washington was the first President of the United States of America, serving two terms from 1789 to 1797. He was a key figure in the American Revolution and played a crucial role in the establishment of the United States as a nation. Washington was a surveyor, tobacco farmer, and military leader, and he was widely respected for his leadership and integrity. He was a strong advocate for the principles of democracy and republicanism, and he helped to establish many of the institutions and traditions that continue to shape American government and society today."
+}
+```
+
 ### Look at Text
 - `http://localhost:8787/look/text?auth=secret&text=I%20love%20pizza` - distilbert-sst-2
 ```json
