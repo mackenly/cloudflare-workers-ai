@@ -1,4 +1,4 @@
-name = "sms-llm"
+name = "cloudflare-workers-ai"
 main = "src/index.ts"
 compatibility_date = "2023-11-21"
 
@@ -6,4 +6,4 @@ compatibility_date = "2023-11-21"
 binding = "AI" # i.e. available in your Worker on env.AI
 
 [vars]
-API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" # don't store secrets in vars, use a secret store instead
+API_KEY = "secret" # don't store secrets in vars, use a secret store instead
